@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   resources :users
 
   #rides
+  resources :rides
 
   #attractions
+  resources :attractions
   
   
 end
