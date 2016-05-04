@@ -7,8 +7,8 @@ class Ride < ActiveRecord::Base
     #instantiated with @user_id => can get @user
     #instantiated with @attraction_id => can get @attraction
   def take_ride
-    @user = User.find_by_id(self.user_id)
-    @attraction = Attraction.find_by_id(self.attraction_id)
+    @user = User.find(self.user_id)
+    @attraction = Attraction.find(self.attraction_id)
     ticket_limit = @user.tickets < @attraction.tickets
     height_limit = @user.height < @attraction.min_height
 
